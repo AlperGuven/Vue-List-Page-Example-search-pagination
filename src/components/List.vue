@@ -11,7 +11,6 @@
               v-for="(product, index) in searchedProducts"
             >
               <div class="ListOfProducts__main__product-card--item mar-bt-10">
-                <!-- <img class="card-img-top" src="dist/img/placeholder-blue-800x600px.png" alt="Card image cap"> -->
                 <div class="ListOfProducts__main__product-card--item__body">
                   <p class="ListOfProducts__main__product-card--item__body--title">Product Name: {{ product.title }}</p>
                   <div class="ListOfProducts__main__product-card--item__body--content"
