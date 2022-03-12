@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
+
+$base-margin-top-bottom: 20px;
+$max-form-width: 350px;
+$font-barlow-sans-serif: 'Barlow Condensed', sans-serif;
+$header-one-font-size: 48px;
+$paragraph-font-size: 20px;
+$span-font-size: 16px;
+$input-font-size: 20px;
+$body-background-color: #085147;
+$white-color: #ffebe6;
+$border-color: #317E73;
+$padding-const: 15px;
+
+h1 {
+  font-family: $font-barlow-sans-serif;
+  font-size: $header-one-font-size;
+  color: $white-color;
+}
+
+p {
+  font-family: $font-barlow-sans-serif;
+  font-size: $paragraph-font-size;
+  color: $white-color;
+}
+
+span {
+  font-family: $font-barlow-sans-serif;
+  font-size: $span-font-size;
+}
+
+input {
+  font-family: $font-barlow-sans-serif;
+  font-size: $input-font-size;
+}
+
+button:disabled {
+  pointer-events: none;
+  background: #dddddd;
+}
+
+.mar-bt-10 {
+  margin-bottom: 10px;
+}
+
+.mar-tp-25 {
+  margin-top: 25px;
+}
+
+#rootApp {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ListOfProducts {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+
+
+  &__main {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 2000px;
+
+    &__header-element {
+      position: relative;
+      padding-right: $padding-const;
+      padding-left: 10%;
+      flex: 2 1 100%;
+      @media only screen and (max-width : 1670px) {
+        padding-left: 1%;
+      }
+    }
+
+    &__product-card {
+      position: relative;
+      flex: 0 0 50%;
+      min-width: 0;
+      max-width: 760px;
+      word-wrap: break-word;
+      background-clip: border-box;
+      border-radius: 10px;
+      border: 2px solid $border-color;
+
+      &--item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &__body {
+          flex: 1 1 auto;
+          align-items: center;
+          padding: 20px;
+
+          &--content {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            &__btn-wrapper {
+              display: inline-flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ProductTools {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 20px 0 0 10px;
+
+
+  &__product-search {
+    position: relative;
+    flex: 2 0 auto;
+    width: 25%;
+    min-width: 170px;
+    padding: 0 15px 15px 15px;
+    align-self: center;
+  }
+
+  &__product-pagination {
+    position: relative;
+    flex: 0 0 auto;
+    padding-right: $padding-const;
+    padding-left: $padding-const;
+    align-self: center;
+
+    button:focus:not(:focus-visible) {
+      background-color: $white-color;
+      color: black;
+    }
+  }
+}
